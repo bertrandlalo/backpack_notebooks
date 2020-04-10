@@ -1,0 +1,35 @@
+name: eeg_oddball_benchmark-env
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python>=3.7,<3.8
+  - matplotlib
+  - numpy
+  - jupyter
+  - numpy>=1.17.3,<1.18
+  - scikit-learn>=0.22.1,<0.23
+  # Dependencies that are declared on timeflux but need to be managed by conda
+  # (ideally, timeflux should have a conda package too, I think)
+  - networkx>=2.1
+  - pyyaml>=3.13
+  - pandas>=0.23.4,<0.24
+  - xarray>=0.11
+  - bottleneck
+  - scipy>=1.1
+  - pyzmq>=17.1.2
+  - coloredlogs>=10.0
+  - pytables>=3.4.4
+  - jsonschema>=3.1.1
+  - pytest>=4.0.2
+  - sphinx>=2.2.1,<2.3
+  - seaborn
+  - h5py
+  # Extra pip dependencies
+  - pip
+  - pip:
+      - mne>=0.19,<0.20
+      - pylsl>=1.13.1,<1.14
+      - git+https://github.com/NeuroTechX/moabb#egg=moabb
+      - git+https://github.com/timeflux/timeflux@d22423d#egg=timeflux
+      - git+https://github.com/timeflux/timeflux_dsp@9f7a5b3a#egg=timeflux_dsp
