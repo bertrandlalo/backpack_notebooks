@@ -4,13 +4,13 @@ import numpy as np
 from mne.time_frequency import psd_welch
 from numpy.lib import stride_tricks
 from scipy.signal import filtfilt, lfilter
-from timeflux_dsp.utils.filters import construct_iir_filter
 from moabb.datasets import SSVEPExo
 
 dataset = SSVEPExo()
 event_id = dataset.event_id
 
 def compute_mega_raw(raw, filt_method, frequencies,  order):
+    from timeflux_dsp.utils.filters import construct_iir_filter
     if filt_method == 'lfilter':
         filt_method = lfilter
     elif filt_method == 'filtfilt':
@@ -49,7 +49,7 @@ def compute_mega_epochs(raw, tmin=1, tmax=5, **kwargs):
     X, y = extract_epochs(mega_raw, tmin=tmin, tmax=tmax)
     return mega_raw, X, y
 
-def extract_epochs(raw, tmin=1, tmax=5):
+def extract_epochs(raw, tmin=1, tmax=5, event_id=event_id):
     # Extract epochs
     events = mne.find_events(raw, verbose=False)
 
