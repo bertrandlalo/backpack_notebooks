@@ -130,8 +130,8 @@ def make_subject_hdf5(session_data: dict, output: str,
     df_eeg_test, df_events_test = runs_to_frames(session_data, test_runs, stim_to_event=stim_to_event)
 
     # add train sequence events
-    df_events_train.iloc[0, :] = ['train_begins', '{}']
-    df_events_train.iloc[-1, :] = ['train_ends', '{}']
+    df_events_train.iloc[0, :] = ['train_starts', '{}']
+    df_events_train.iloc[-1, :] = ['train_stops', '{}']
 
     # concatenate train data and test data (to simulate a real experiment)
     df_eeg = pd.concat([df_eeg_train, df_eeg_test])
@@ -161,7 +161,7 @@ def make_subjects_hdf5(**kwargs):
 
 
 if __name__ == "__main__":
-    onset_label = 'stim_begins'
+    onset_label = 'flickering_starts'
     data_key = 'target'
     stim_to_event = {
         1: {'label': onset_label, 'data': json.dumps({data_key: '13Hz'})},
