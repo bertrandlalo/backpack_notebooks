@@ -44,6 +44,7 @@ Usage
     - The output events will be dumped in a csv with name set lin 14 of file
     `graphs/dump.yaml`.  Default is `predictions_12.csv`.
     -  Output looks like :
+
     .. csv-table:: predictions_12.csv
        :file: predictions_12.csv
        :header-rows: 7
