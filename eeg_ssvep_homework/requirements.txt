@@ -9,4 +9,5 @@ scipy>=1.1
 seaborn
 mne>=0.19,<0.20
 git+https://github.com/NeuroTechX/moabb#egg=moabb
-git+https://github.com/alexandrebarachant/pyRiemann
+git+https://github.com/bertrandlalo/pyRiemann
+git+https://github.com/timeflux/timeflux_bci.git@38c9551#egg=timeflux
