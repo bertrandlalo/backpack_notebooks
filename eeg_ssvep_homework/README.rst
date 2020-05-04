@@ -45,9 +45,9 @@ Usage
     `graphs/dump.yaml`.  Default is `predictions_12.csv`.
     -  Output looks like :
 
-    .. csv-table:: predictions_ex.csv
-       :file: predictions_ex.csv
-       :header-rows: 2
+ .. csv-table:: predictions_ex.csv
+    :file: predictions_ex.csv
+    :header-rows: 2
 
 References
 ===========
