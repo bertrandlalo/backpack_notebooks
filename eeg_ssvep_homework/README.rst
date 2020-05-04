@@ -45,7 +45,7 @@ Usage
     `graphs/dump.yaml`.  Default is `predictions_12.csv`.
     -  Output looks like :
 
-    label, data, timestamp
+
     | label           | data                     |timestamp                        |
     |----------------------------------------------------------------------------- |
     |train_starts     | {}                       | 2020-01-01 00:01:08.703125      |
@@ -59,7 +59,6 @@ Usage
     |predict          | "{""result"": ""13Hz""}" | 2020-01-01 00:06:38.941406250   |
     |flickering_starts | {'target': '13Hz'}       | 2020-01-01 00:06:48.941406250   |
     |predict          | "{""result"": ""13Hz""}" | 2020-01-01 00:06:47.941406250   |
-    |----------------------------------------------------------------------------- |
 
 
 
