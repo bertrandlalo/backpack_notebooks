@@ -47,6 +47,8 @@ Usage
 
     .. csv-table:: predictions_ex.csv
        :file: predictions_ex.csv
+       :header-rows: 3
+       :header: "label", "data", "timestamp"
 
 References
 ===========
