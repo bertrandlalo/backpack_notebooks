@@ -94,7 +94,7 @@ def runs_to_frames(session_data: dict,
         df_run_eeg, df_run_events = raw_to_frames(raw, stim_to_event)
         df_eeg.append((df_run_eeg))
         df_events.append((df_run_events))
-    return pd.concat(df_eeg), pd.concat(df_events)
+    return pd.concat(df_eeg).reset_index(drop=True), pd.concat(df_events).reset_index(drop=True)
 
 
 def make_subject_hdf5(session_data: dict, output: str,
@@ -130,7 +130,7 @@ def make_subject_hdf5(session_data: dict, output: str,
     df_eeg_test, df_events_test = runs_to_frames(session_data, test_runs, stim_to_event=stim_to_event)
 
     # add train sequence events
-    df_events_train.iloc[0, :] = ['train_starts', '{}']
+    df_events_train.iloc[df_events_train.dropna().index[0] - 1, :] = ['train_starts', '{}']
     df_events_train.iloc[-1, :] = ['train_stops', '{}']
 
     # concatenate train data and test data (to simulate a real experiment)
