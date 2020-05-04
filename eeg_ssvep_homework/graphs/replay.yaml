@@ -9,7 +9,7 @@ graphs:
           keys:
             - /eeg
             - /events
-          speed: 20
+          speed: 1
           resync: False
 
       - id: pub_eeg

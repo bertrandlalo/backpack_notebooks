@@ -11,7 +11,7 @@ graphs:
         module: timeflux.nodes.debug
         class: Dump
         params:
-          fname: events_with_prediction.csv
+          fname: predictions_ex.csv
     edges:
       - source: sub:events
         target: dump
