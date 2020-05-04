@@ -45,8 +45,23 @@ Usage
     `graphs/dump.yaml`.  Default is `predictions_12.csv`.
     -  Output looks like :
 
-    .. csv-table:: predictions_ex.csv
-       :file: predictions_ex.csv
+    label, data, timestamp
+    | label           | data                     |timestamp                        |
+    |----------------------------------------------------------------------------- |
+    |train_starts     | {}                       | 2020-01-01 00:01:08.703125      |
+    |flickering_starts | {'target': '13Hz'}       | 2020-01-01 00:01:08.707031250   |
+    |flickering_starts | {'target': '13Hz'}       | 2020-01-01 00:01:17.707031250   |
+    |flickering_starts | {'target': '17Hz'}       | 2020-01-01 00:01:53.707031250   |
+    |flickering_starts | {'target': '21Hz'}       | 2020-01-01 00:02:02.707031250   |
+    |...              |  ...                     |  ...                            |
+    |train_stops      | {}                       | 2020-01-01 00:05:53.621093750   |
+    | flickering_starts| {'target': '13Hz'}       | 2020-01-01 00:06:39.941406250   |
+    |predict          | "{""result"": ""13Hz""}" | 2020-01-01 00:06:38.941406250   |
+    |flickering_starts | {'target': '13Hz'}       | 2020-01-01 00:06:48.941406250   |
+    |predict          | "{""result"": ""13Hz""}" | 2020-01-01 00:06:47.941406250   |
+    |----------------------------------------------------------------------------- |
+
+
 
 .. csv-table:: predictions_ex.csv
    :file: predictions_ex.csv
