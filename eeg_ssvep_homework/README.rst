@@ -48,6 +48,11 @@ Usage
     .. csv-table:: predictions_ex.csv
        :file: predictions_ex.csv
 
+.. csv-table:: predictions_ex.csv
+   :file: predictions_ex.csv
+   :widths: 30, 70
+   :header-rows: 1
+
 
 References
 ===========
