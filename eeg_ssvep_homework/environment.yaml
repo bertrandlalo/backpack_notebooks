@@ -1,4 +1,4 @@
-name: eeg_ssvep_homework-env
+name: ssvep-env
 channels:
   - defaults
   - conda-forge
@@ -17,4 +17,5 @@ dependencies:
   - pip:
       - mne>=0.19,<0.20
       - git+https://github.com/NeuroTechX/moabb#egg=moabb
-      - git+https://github.com/alexandrebarachant/pyRiemann
+      - git+https://github.com/bertrandlalo/pyRiemann
+      - git+https://github.com/timeflux/timeflux.git@38c9551#egg=timeflux
