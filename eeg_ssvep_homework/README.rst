@@ -47,7 +47,7 @@ Usage
 
     .. csv-table:: predictions_ex.csv
        :file: predictions_ex.csv
-       :header-rows: 2
+       :header-rows: 3
 
 References
 ===========
